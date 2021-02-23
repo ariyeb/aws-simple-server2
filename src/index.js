@@ -10,4 +10,5 @@ app.get("/", (req, res) => {
     res.sendFile(filePath);
 });
 
-app.listen(8080, () => console.log("Server connected, port: 8080"));
+const port = process.env.PORT || 3030;
+app.listen(port, () => console.log("Server connected, port:", port));
